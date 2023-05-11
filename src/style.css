@@ -18,14 +18,12 @@ a{
     transition: 0.3s ease-in-out;
 }
 
-img{
+header img{
     width: 10%;
 }
 
-video {
+  .imagem-de-capa img{
     width: 100%;
-    max-height: 60vh;
-    object-fit: cover;
   }
 
 header{
@@ -56,7 +54,6 @@ button a:hover{
     margin-top: 1em;
     display: flex;
     gap: 1.5em;
-    
 }
 
 select{

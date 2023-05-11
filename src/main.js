@@ -1,4 +1,4 @@
-import {filtrar} from './data'
+// import {filtrar} from './data'
 import data from './data/rickandmorty/rickandmorty.js';
 
 const personagens = data.results;
@@ -22,5 +22,3 @@ function criaCardPersonagens(personagens) {
 
     document.querySelector("#card-personagens").innerHTML = printarCard.join("");
 }
-
-console.log(filtrar)
