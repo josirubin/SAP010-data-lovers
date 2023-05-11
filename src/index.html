@@ -2,11 +2,55 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Dangrek&display=swap" rel="stylesheet">
+<title>Rick and morty</title>
   </head>
   <body>
+    <header>
+      <img src="images/logo.png" alt="rick and morty logo">
+      <button><a href="index.html" id="refresh">Página Inicial</a></button>
+    </header>
+
+    <main>
+      <section class="video">
+        <video autoplay loop>
+          <source src="images/video-pag-inicial.mp4" type="video/mp4">
+        </video>
+        </section>
+        
+        <section class="selecao">
+          <h1>Filtre por:</h1>
+
+        <select name="btn-opcao" id="selecao-status">
+          <option value="" selected disabled hidden>Status</option>
+          <option value="alive">Vivo</option>
+          <option value="dead">Morto</option>
+          <option value="unknow">Desconhecido</option>
+        </select>
+
+        <select name="btn-opcao" id="selecao-especie">
+          <option value="" selected disabled hidden>Espécie</option>
+          <option value="human">Human</option>
+          <option value="alien">Alienígena</option>
+          <option value="unknow">Desconhecido</option>
+        </select>
+        </section>
+
+        <div class="personagens" id="card-personagens"></div>
+    </main>
+
+    <footer>
+      <p>Projeto desenvolvido por Josielen Rubin e Juliana Matos | Turma SAP010 Bootcamp Laboratoria</p>
+    </footer>
+
+
     <div id="root"></div>
+    <script src="data/rickandmorty/rickandmorty.js" type="module"></script>
     <script src="main.js" type="module"></script>
+    <script src="data.js" type="module"></script>
+
   </body>
 </html>

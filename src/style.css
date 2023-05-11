@@ -1,0 +1,119 @@
+:root{
+    --light-blue: #00B5CC;
+    --dark-blue: #00353E;
+    --green: #b2df28;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Creepster', cursive;
+    font-family: 'Dangrek', cursive;
+}
+
+a{
+    color: var(--light-blue);
+    text-decoration: none;
+    font-family: 'Creepster', cursive;
+    transition: 0.3s ease-in-out;
+}
+
+img{
+    width: 10%;
+}
+
+video {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+
+header{
+    font-family: 'Creepster', cursive;
+    height: 4em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 2em;
+    transition: 0.3s ease-in-out;
+}
+
+button a:hover{
+    color: var(--green);
+}
+
+.selecao{
+    font-family: 'Creepster', cursive;
+    margin-left: 5em;
+    margin-top: 1em;
+    display: flex;
+    gap: 1.5em;
+    
+}
+
+select{
+    font-family: 'Creepster', cursive;
+    color: var(--light-blue);
+    font-size: 2em;
+    border-style: none;
+}
+
+
+option{
+    font-family: 'Creepster', cursive;
+    color: var(--light-blue);
+    font-size: 1em;
+    transition: 0.3s ease-in-out;
+}
+
+option:hover{
+    color: var(--green);
+}
+
+.personagens {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2em;
+    color: var(--dark-blue);
+    width: fit-content;
+    height: 70vh;
+    overflow-y: scroll;
+    margin-top: 2em;
+}
+
+.cards {
+    background-color: #EBEBEB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards img{
+    width: 15em;
+}
+
+.cards h2{
+    font-family: 'Creepster', cursive;
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 1.8em;
+    width: 7em;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-blue);
+    border-radius: 20px;
+  }
