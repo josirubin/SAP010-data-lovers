@@ -9,17 +9,33 @@
 <title>Rick and morty</title>
   </head>
   <body>
-    <header>
-      <img src="images/logo.png" alt="rick and morty logo">
-      <button><a href="index.html" id="refresh">Página Inicial</a></button>
-    </header>
-
     <main>
-      <section class="imagem-de-capa">
-        <img src="images/rick-e-morty-1.jpg" alt="Capa Rick and Morty">
+      <section class="slider">
+        <div class="slides">
+          <input type="radio" name="raio-btn" id="radio1">
+          <input type="radio" name="raio-btn" id="radio2">
+
+          <div class="slide primeiro">
+            <img src="images/rick-e-morty-1-editado.jpg" alt="capa slide">
+          </div>
+          <div class="slide">
+            <img src="images/rick-e-morty-1-slide2.jpg" alt="capa slide">
+          </div>
+
+          <div class="navegacao-auto">
+            <div class="auto-bnt1"></div>
+            <div class="auto-bnt2"></div>
+          </div>
+        </div>
+
+        <div class="navegacao-manual">
+          <label for="radio1" class="bnt-manual"></label>
+          <label for="radio2" class="bnt-manual"></label>
+        </div>
         </section>
         
         <section class="selecao">
+          
           <h1>Filtre por:</h1>
 
         <select name="btn-opcao" id="selecao-status">
@@ -35,13 +51,16 @@
           <option value="alien">Alienígena</option>
           <option value="unknow">Desconhecido</option>
         </select>
+
+        <input type="text" placeholder="Digite o nome do personagem">
+        <button>Resetar Informações</button>
         </section>
 
         <div class="personagens" id="card-personagens"></div>
     </main>
 
     <footer>
-      <p>Projeto desenvolvido por Josielen Rubin | Turma SAP010 Bootcamp Laboratoria</p>
+      <p>Projeto desenvolvido por <a href="https://github.com/josirubin">Josielen Rubin</a> | Turma SAP010 Bootcamp Laboratoria</p>
     </footer>
 
 
