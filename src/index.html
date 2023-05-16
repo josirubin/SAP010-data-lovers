@@ -9,33 +9,15 @@
 <title>Rick and morty</title>
   </head>
   <body>
-    <main>
-      <section class="slider">
-        <div class="slides">
-          <input type="radio" name="raio-btn" id="radio1">
-          <input type="radio" name="raio-btn" id="radio2">
-
-          <div class="slide primeiro">
-            <img src="images/rick-e-morty-1-editado.jpg" alt="capa slide">
-          </div>
-          <div class="slide">
-            <img src="images/rick-e-morty-1-slide2.jpg" alt="capa slide">
-          </div>
-
-          <div class="navegacao-auto">
-            <div class="auto-bnt1"></div>
-            <div class="auto-bnt2"></div>
-          </div>
-        </div>
-
-        <div class="navegacao-manual">
-          <label for="radio1" class="bnt-manual"></label>
-          <label for="radio2" class="bnt-manual"></label>
-        </div>
-        </section>
-        
+    <header>
+      <img src="images/logo.png" alt="logo rick and morty">
+      <div class="nav">
+      <button>Página Inicial</button>
+      <button>Sobre a série</button>
+    </div>
+    </header>
+        <main>
         <section class="selecao">
-          
           <h1>Filtre por:</h1>
 
         <select name="btn-opcao" id="selecao-status">
@@ -53,7 +35,6 @@
         </select>
 
         <input type="text" placeholder="Digite o nome do personagem">
-        <button>Resetar Informações</button>
         </section>
 
         <div class="personagens" id="card-personagens"></div>
