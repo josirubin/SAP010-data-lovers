@@ -34,7 +34,13 @@
           <option value="unknow">Desconhecido</option>
         </select>
 
-        <input type="text" placeholder="Digite o nome do personagem">
+        <select name="btn-opcao" id="ordenar">
+          <option value="" selected disabled hidden>Ordenar</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+        </select>
+
+        <input type="text" id='input-de-busca' placeholder="Digite o nome do personagem">
         </section>
 
         <div class="personagens" id="card-personagens"></div>

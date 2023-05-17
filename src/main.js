@@ -1,9 +1,9 @@
-// import {filtrar} from './data'
+import { buscarNome, ordenarAZ } from './data.js'
 import data from './data/rickandmorty/rickandmorty.js';
 
 const personagens = data.results;
-
-criaCardPersonagens(personagens);
+const inputDeBusca = document.querySelector('#input-de-busca');
+const selecaoOrdem = document.querySelector('#ordenar');
 
 function criaCardPersonagens(personagens) {
   const printarCard = personagens.map((personagens) => {
@@ -14,6 +14,7 @@ function criaCardPersonagens(personagens) {
              <div class="filtros">
              <p>Espécie: ${personagens.species}</p>
              <p>Status: ${personagens.status}</p>
+             <p>Origem: ${personagens.origin.name}</p>
              </div>
         </div>
         `;
@@ -22,3 +23,19 @@ function criaCardPersonagens(personagens) {
 
   document.querySelector("#card-personagens").innerHTML = printarCard.join("");
 }
+
+window.addEventListener('load', () => criaCardPersonagens(personagens))
+
+//função no input para buscar por nome
+function filtroNomes() {
+  const inputFilter = inputDeBusca.value;
+  const filter = buscarNome(personagens, inputFilter);
+  return criaCardPersonagens(filter);
+}
+inputDeBusca.addEventListener('input', filtroNomes)
+
+
+selecaoOrdem.addEventListener('change', () => {
+  const ordemPersonagens = ordenarAZ(selecaoOrdem.value, personagens);
+  criaCardPersonagens(ordemPersonagens);
+})

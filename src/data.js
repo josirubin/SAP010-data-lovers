@@ -1,4 +1,24 @@
-export const filtrar = (array, key, value) => {
-  const filtro = array.filter((item) => item[key] === value);
+export const buscarNome = (personagens, name) => {
+  const filtraPersonagens = personagem => personagem.name.toUpperCase().includes(name.toUpperCase());
+  const filtro = personagens.filter(filtraPersonagens);
   return filtro;
 }
+
+export function ordenarAZ(value, personagens){
+  const ordenarPersonagensAZ = [...personagens]; //cria uma cópia da array para não modificar a original 
+  if(value === 'a-z'){
+    ordenarPersonagensAZ.sort(function (a, b){
+      if(a.name < b.name){
+        return -1;
+      }
+    })
+  }else{
+    ordenarPersonagensAZ.sort(function (a, b){
+      if(a.name > b.name){
+        return -1;
+      }
+    })
+  }
+  return ordenarPersonagensAZ
+}
+

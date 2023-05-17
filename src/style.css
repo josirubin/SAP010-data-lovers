@@ -54,6 +54,7 @@ main{
 }
 
 .selecao{
+    color: var(--dark-blue);
     font-family: 'Creepster', cursive;
     display: flex;
     justify-content: center;
@@ -98,7 +99,7 @@ option:hover{
     align-items: center;
     gap: 2em;
     color: var(--dark-blue);
-    max-width: fit-content;
+    width: fit-content;
     height: 65vh;
     overflow-y: scroll;
 }
@@ -109,6 +110,7 @@ option:hover{
     flex-direction: column;
     align-items: center;
     box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.84);
+    height: 30em;
 }
 
 .cards h2{
@@ -117,6 +119,10 @@ option:hover{
     text-align: center;
     font-size: 1.8em;
     width: 7em;
+}
+
+.cards p{
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
@@ -140,7 +146,10 @@ input{
 }
 
 footer{
-	text-align: center;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.2em;
 }
 
 footer a{
