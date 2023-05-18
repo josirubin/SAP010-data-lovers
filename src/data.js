@@ -22,3 +22,12 @@ export function ordenarAZ(value, personagens){
   return ordenarPersonagensAZ
 }
 
+export function filtrar (personagens, value, key) {
+  const filtro = personagens.filter(function(personagem) {
+    const filtrado = personagem[key].toLowerCase() === value;
+    return filtrado
+  });
+
+  return filtro;
+}
+

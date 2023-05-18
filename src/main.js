@@ -1,9 +1,20 @@
-import { buscarNome, ordenarAZ } from './data.js'
+import { buscarNome, ordenarAZ, filtrar } from './data.js'
 import data from './data/rickandmorty/rickandmorty.js';
 
 const personagens = data.results;
 const inputDeBusca = document.querySelector('#input-de-busca');
 const selecaoOrdem = document.querySelector('#ordenar');
+const selecaoEspecie = document.querySelector('#selecao-especie');
+const selecaoStatus = document.querySelector('#selecao-status');
+const divSobreASerie = document.querySelector('.container.secundaria');
+const divPaginaInicial = document.querySelector('.container');
+const btnSobre = document.querySelector('#sobre-serie');
+
+btnSobre.addEventListener('click', function(){
+  if(divPaginaInicial.style.display !== 'none'){
+    divPaginaInicial.style.display = 'none';
+    divSobreASerie.style.display = 'block'}
+})
 
 function criaCardPersonagens(personagens) {
   const printarCard = personagens.map((personagens) => {
@@ -34,8 +45,20 @@ function filtroNomes() {
 }
 inputDeBusca.addEventListener('input', filtroNomes)
 
-
 selecaoOrdem.addEventListener('change', () => {
   const ordemPersonagens = ordenarAZ(selecaoOrdem.value, personagens);
   criaCardPersonagens(ordemPersonagens);
 })
+
+selecaoEspecie.addEventListener('change', (event) => {
+  const valor = event.target.value;
+  const personagensFiltrados = filtrar(personagens, valor, "species");
+  return criaCardPersonagens(personagensFiltrados);
+})
+
+selecaoStatus.addEventListener('change', (event) => {
+  const valor = event.target.value;
+  const personagensFiltrados = filtrar(personagens, valor, "status");
+  return criaCardPersonagens(personagensFiltrados);
+})
+
