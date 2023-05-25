@@ -4,6 +4,7 @@ export const buscarNome = (personagens, name) => {
   return filtro;
 }
 
+
 export function ordenarAZ(value, personagens){
   const ordenarPersonagensAZ = [...personagens]; //cria uma cópia da array para não modificar a original 
   if(value === 'a-z'){
@@ -22,6 +23,7 @@ export function ordenarAZ(value, personagens){
   return ordenarPersonagensAZ
 }
 
+//filtro por tipo
 export function filtrar (personagens, value, key) {
   const filtro = personagens.filter(function(personagem) {
     const filtrado = personagem[key].toLowerCase() === value;
@@ -30,4 +32,5 @@ export function filtrar (personagens, value, key) {
 
   return filtro;
 }
+
 

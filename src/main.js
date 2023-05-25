@@ -10,12 +10,14 @@ const divSobreASerie = document.querySelector('.container.secundaria');
 const divPaginaInicial = document.querySelector('.container');
 const btnSobre = document.querySelector('#sobre-serie');
 
+//mudança de página
 btnSobre.addEventListener('click', function(){
   if(divPaginaInicial.style.display !== 'none'){
     divPaginaInicial.style.display = 'none';
     divSobreASerie.style.display = 'block'}
 })
 
+//criação cards
 function criaCardPersonagens(personagens) {
   const printarCard = personagens.map((personagens) => {
     const card = `
@@ -40,22 +42,25 @@ window.addEventListener('load', () => criaCardPersonagens(personagens))
 //função no input para buscar por nome
 function filtroNomes() {
   const inputFilter = inputDeBusca.value;
-  const filter = buscarNome(personagens, inputFilter);
-  return criaCardPersonagens(filter);
+  const filtroNome = buscarNome(personagens, inputFilter);
+  return criaCardPersonagens(filtroNome);
 }
 inputDeBusca.addEventListener('input', filtroNomes)
 
+//ordenação AZ - ZA
 selecaoOrdem.addEventListener('change', () => {
   const ordemPersonagens = ordenarAZ(selecaoOrdem.value, personagens);
   criaCardPersonagens(ordemPersonagens);
 })
 
+//filtro espécies
 selecaoEspecie.addEventListener('change', (event) => {
   const valor = event.target.value;
   const personagensFiltrados = filtrar(personagens, valor, "species");
   return criaCardPersonagens(personagensFiltrados);
 })
 
+//filtro status
 selecaoStatus.addEventListener('change', (event) => {
   const valor = event.target.value;
   const personagensFiltrados = filtrar(personagens, valor, "status");
