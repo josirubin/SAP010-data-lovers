@@ -12,10 +12,11 @@ const btnSobre = document.querySelector('#sobre-serie');
 const porcentagem = document.querySelector('#porcentagem');
 
 //mudança de página
-btnSobre.addEventListener('click', function(){
-  if(divPaginaInicial.style.display !== 'none'){
+btnSobre.addEventListener('click', function () {
+  if (divPaginaInicial.style.display !== 'none') {
     divPaginaInicial.style.display = 'none';
-    divSobreASerie.style.display = 'block'}
+    divSobreASerie.style.display = 'block'
+  }
 })
 
 //criação cards
@@ -36,6 +37,7 @@ function criaCardPersonagens(personagens) {
 
   document.querySelector("#card-personagens").innerHTML = printarCard.join("");
 }
+
 
 window.addEventListener('load', () => criaCardPersonagens(personagens))
 
@@ -58,6 +60,7 @@ selecaoOrdem.addEventListener('change', () => {
 
 //filtro espécies
 selecaoEspecie.addEventListener('change', (event) => {
+  selecaoStatus.value = ""; //zera caso houver uma outra seleção no outro input
   const valor = event.target.value;
   const personagensFiltrados = filtrar(personagens, valor, "species");
   criaCardPersonagens(personagensFiltrados);
@@ -68,6 +71,7 @@ selecaoEspecie.addEventListener('change', (event) => {
 
 //filtro status
 selecaoStatus.addEventListener('change', (event) => {
+  selecaoEspecie.value = ""; //zera caso houver uma outra seleção no outro input
   const valor = event.target.value;
   const personagensFiltrados = filtrar(personagens, valor, "status");
   criaCardPersonagens(personagensFiltrados);
@@ -75,4 +79,3 @@ selecaoStatus.addEventListener('change', (event) => {
   const calculoPorcentagem = calcularPorcentagem(personagens.length, personagensFiltrados.length)
   porcentagem.innerHTML = "Esse <span>status</span> apresenta " + calculoPorcentagem + "% dos personagens."
 })
-
