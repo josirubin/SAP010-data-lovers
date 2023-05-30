@@ -34,3 +34,7 @@ export function filtrar (personagens, value, key) {
 }
 
 
+export function calcularPorcentagem (tamanhoDaLista, tamanhoDaListaFiltrada){
+  return Math.round((tamanhoDaListaFiltrada*100)/tamanhoDaLista);
+}
+

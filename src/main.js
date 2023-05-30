@@ -1,4 +1,4 @@
-import { buscarNome, ordenarAZ, filtrar } from './data.js'
+import { buscarNome, ordenarAZ, filtrar, calcularPorcentagem } from './data.js'
 import data from './data/rickandmorty/rickandmorty.js';
 
 const personagens = data.results;
@@ -9,6 +9,7 @@ const selecaoStatus = document.querySelector('#selecao-status');
 const divSobreASerie = document.querySelector('.container.secundaria');
 const divPaginaInicial = document.querySelector('.container');
 const btnSobre = document.querySelector('#sobre-serie');
+const porcentagem = document.querySelector('#porcentagem');
 
 //mudança de página
 btnSobre.addEventListener('click', function(){
@@ -27,7 +28,6 @@ function criaCardPersonagens(personagens) {
              <div class="filtros">
              <p>Espécie: ${personagens.species}</p>
              <p>Status: ${personagens.status}</p>
-             <p>Origem: ${personagens.origin.name}</p>
              </div>
         </div>
         `;
@@ -43,7 +43,10 @@ window.addEventListener('load', () => criaCardPersonagens(personagens))
 function filtroNomes() {
   const inputFilter = inputDeBusca.value;
   const filtroNome = buscarNome(personagens, inputFilter);
-  return criaCardPersonagens(filtroNome);
+  criaCardPersonagens(filtroNome);
+
+  const calculoPorcentagem = calcularPorcentagem(personagens.length, filtroNome.length)
+  porcentagem.innerHTML = "Essa <span>busca</span> apresenta " + calculoPorcentagem + "% dos personagens."
 }
 inputDeBusca.addEventListener('input', filtroNomes)
 
@@ -57,13 +60,19 @@ selecaoOrdem.addEventListener('change', () => {
 selecaoEspecie.addEventListener('change', (event) => {
   const valor = event.target.value;
   const personagensFiltrados = filtrar(personagens, valor, "species");
-  return criaCardPersonagens(personagensFiltrados);
+  criaCardPersonagens(personagensFiltrados);
+
+  const calculoPorcentagem = calcularPorcentagem(personagens.length, personagensFiltrados.length)
+  porcentagem.innerHTML = "Essa <span>espécie</span> apresenta " + calculoPorcentagem + "% dos personagens."
 })
 
 //filtro status
 selecaoStatus.addEventListener('change', (event) => {
   const valor = event.target.value;
   const personagensFiltrados = filtrar(personagens, valor, "status");
-  return criaCardPersonagens(personagensFiltrados);
+  criaCardPersonagens(personagensFiltrados);
+
+  const calculoPorcentagem = calcularPorcentagem(personagens.length, personagensFiltrados.length)
+  porcentagem.innerHTML = "Esse <span>status</span> apresenta " + calculoPorcentagem + "% dos personagens."
 })
 
