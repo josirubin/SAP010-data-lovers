@@ -60,7 +60,7 @@ selecaoOrdem.addEventListener('change', () => {
 
 //filtro espécies
 selecaoEspecie.addEventListener('change', (event) => {
-  selecaoStatus.value = ""; //zera caso houver uma outra seleção no outro input
+  selecaoStatus.value = ""; //zera caso houver uma outra seleção no outro select
   const valor = event.target.value;
   const personagensFiltrados = filtrar(personagens, valor, "species");
   criaCardPersonagens(personagensFiltrados);
@@ -71,7 +71,7 @@ selecaoEspecie.addEventListener('change', (event) => {
 
 //filtro status
 selecaoStatus.addEventListener('change', (event) => {
-  selecaoEspecie.value = ""; //zera caso houver uma outra seleção no outro input
+  selecaoEspecie.value = ""; //zera caso houver uma outra seleção no outro select
   const valor = event.target.value;
   const personagensFiltrados = filtrar(personagens, valor, "status");
   criaCardPersonagens(personagensFiltrados);

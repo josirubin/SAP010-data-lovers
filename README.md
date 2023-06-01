@@ -25,3 +25,7 @@ As cores do projeto foram tiradas do logo de Rick and Morty e foram pensadas par
 As fontes também foram pensadas em se aproximar o máximo possível da série. A fonte principal, que foi usada em links, botões e títulos, se aproxima muito do logo e isso causa também uma familiarização do usuário com a série.
 
 ![fontes do projeto](./src/images/fontes%20usadas.png)
+
+## Tecnologias utilizadas
+
+[![Tecnologias e Ferramentas utilizadas:](https://skillicons.dev/icons?i=js,html,css,figma,github,git,jest)](https://skillicons.dev)

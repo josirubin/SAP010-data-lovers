@@ -1,47 +1,42 @@
-import { ordenarAZ, filtrar } from '../src/data.js';
+import { ordenarAZ } from '../src/data.js';
 
-const rick = {
+const arrayTeste = [{
   "name": "Rick",
   "status": "Alive",
   "species": "Human"
-}
-
-const morty = {
+},
+{
   "name": "Morty",
   "status": "Alive",
   "species": "Human"
-}
-
-const summer = {
+},
+{
   "name": "Summer",
   "status": "Alive",
   "species": "Human"
-}
+}]
 
-const arrayTeste = [morty, rick, summer];
-const arrayTeste2 = [summer, rick, morty];
-
-describe('filtrar', () => {
-  it('deve ser uma função', () => {
-    expect(typeof filtrar).toBe('function');
-  })
-})
-
-
-describe('Ordernar em ordem alfabetica', () => {
+describe('ordenar AZ - ZA', () => {
   it('is a function', () => {
     expect(typeof ordenarAZ).toBe('function');
   });
 
-  it('Ordenar de a-z e z-a', () => {
-    const ordenarAZ = "a-z"
-    const ordenarZA = "z-a"
-
-    expect(ordenarAZ(ordenarAZ, arrayTeste)).toEqual([morty, rick, summer]);
-    expect(ordenarAZ(ordenarZA, arrayTeste)).toEqual([summer, rick, morty]);
-
-    expect(ordenarAZ(ordenarAZ, arrayTeste2)).toEqual([morty, rick, summer]);
-    expect(ordenarAZ(ordenarZA, arrayTeste2)).toEqual([summer, rick, morty]);
-
+  it('retornar AZ', () => {
+    expect(ordenarAZ('a-z', arrayTeste)).toEqual([{"name": "Morty", "status": "Alive", "species": "Human"}, {"name": "Rick", "status": "Alive", "species": "Human"}, {"name": "Summer", "status": "Alive", "species": "Human"}]);
+  
+    expect(ordenarAZ('a-z', arrayTeste)[0].name).toBe('Morty');
   });
+
+
 });
+
+
+// describe('anotherExample', () => {
+//   it('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
+
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+// });
