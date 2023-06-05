@@ -27,8 +27,9 @@ function criaCardPersonagens(personagens) {
              <img src="${personagens.image}" alt="Imagem do personagem">
              <h2>${personagens.name}</h2>
              <div class="filtros">
-             <p>Espécie: ${personagens.species}</p>
+             <p>Specie: ${personagens.species}</p>
              <p>Status: ${personagens.status}</p>
+             <p>Location: ${personagens.location.name}</p>
              </div>
         </div>
         `;
@@ -79,3 +80,4 @@ selecaoStatus.addEventListener('change', (event) => {
   const calculoPorcentagem = calcularPorcentagem(personagens.length, personagensFiltrados.length)
   porcentagem.innerHTML = "Esse <span>status</span> apresenta " + calculoPorcentagem + "% dos personagens."
 })
+

@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="src/style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Dangrek&display=swap" rel="stylesheet">
-<title>Rick and morty</title>
-  </head>
-  <body>
-    <header>
-      <img src="src/images/logo.png" alt="logo rick and morty">
-      <div class="nav">
-      <button><a href="index.html">Página Inicial</a></button>
-      <button id="sobre-serie">Sobre a série</button>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Creepster&display=swap"
+    rel="stylesheet">
+  <title>Rick and morty</title>
+</head>
+
+<body>
+  <header>
+    <img src="src/images/logo.png" alt="logo rick and morty">
+    <div class="nav">
+      <button><a href="index.html">Home</a></button>
+      <button id="sobre-serie">About the series</button>
     </div>
-    </header>
-        <main>
-          <div class="container">
-        <section class="selecao">
-          <h1>Filtre por:</h1>
+  </header>
+  <main>
+    <div class="container">
+      <section class="selecao">
+        <h1>Filter by:</h1>
 
         <select name="btn-opcao" id="selecao-status">
           <option value="" selected disabled>Status</option>
-          <option value="alive">Vivo</option>
-          <option value="dead">Morto</option>
-          <option value="unknown">Desconhecido</option>
+          <option value="alive">Alive</option>
+          <option value="dead">Dead</option>
+          <option value="unknown">Unknown</option>
         </select>
 
         <select name="btn-opcao" id="selecao-especie">
-          <option value="" selected disabled>Espécie</option>
+          <option value="" selected disabled>Species</option>
           <option value="human">Human</option>
-          <option value="alien">Alienígena</option>
-          <option value="unknown">Desconhecido</option>
+          <option value="alien">Alien</option>
+          <option value="unknown">Unknown</option>
         </select>
 
         <select name="btn-opcao" id="ordenar">
-          <option value="" selected disabled>Ordenar</option>
+          <option value="" selected disabled>Sort</option>
           <option value="a-z">A-Z</option>
           <option value="z-a">Z-A</option>
         </select>
 
-        <input type="text" id="input-de-busca" placeholder="Digite o nome do personagem">
-        </section>
+        <input type="text" id="input-de-busca" placeholder="Character's name">
+      </section>
 
-        <div class="porcentagem">
-          <p id="porcentagem"></p>
-        </div>
-
-        <div class="personagens" id="card-personagens"></div>
+      <div class="porcentagem">
+        <p id="porcentagem"></p>
       </div>
 
-      <div class="container secundaria">
-        <iframe src="https://giphy.com/embed/Cu7tfLe1edy3HE7JfC" width="480" height="266" allow-full-screen></iframe>
-        <h1>Sobre a série</h1>
-        <p>Criada por Justin Roiland e Dan Harmon, Rick e Morty é uma série animada de comédia que mostra as aventuras interdimensionais de Rick, a mente mais brilhante da galáxia, e seu neto Morty. Com sua arma capaz de criar portais para viajar no tempo-espaço, Rick leva Morty para explorar todos as absurdas formas de vida que o universo é capaz de sustentar. Apesar de genial, Rick tem sofre de alcoolismo e possui uma relação conflituosa com sua família, fruto da sua visão cínica da vida e seu egoísmo. Por outro lado, Morty está longe de ter o intelecto do seu avô, mas é o único capaz de fazê-lo ser um pouquinho mais gentil.Entre momentos hilários e reflexões interessantes sobre a vida, Rick e Morty arranca gargalhadas e ainda rende ótimas discussões filosóficas.</p>
-        <div class="gif-morty"><iframe src="https://giphy.com/embed/kc0qZPPoO5AFK7B3xk" width="200" height="200" allow-full-screen></iframe>
+      <div class="personagens" id="card-personagens"></div>
+    </div>
+
+    <div class="container secundaria">
+      <iframe src="https://giphy.com/embed/Cu7tfLe1edy3HE7JfC" width="480" height="266" allow-full-screen></iframe>
+      <h1>About the series</h1>
+      <p>Rick and Morty is an American adult animated science-fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's nighttime programming block Adult Swim. It is distributed internationally by Warner Bros. Television. The series follows the misadventures of Rick Sanchez, a cynical mad scientist, and his good-hearted but fretful grandson Morty Smith, who split their time between domestic life and interdimensional adventures that take place across an infinite number of realities, often traveling to other planets and dimensions through portals and on Rick's flying saucer. The general concept of Rick and Morty relies on two conflicting scenarios: domestic family drama, and a misanthropic grandfather dragging his grandson into hijinks.</p>
+      <div class="gif-morty"><iframe src="https://giphy.com/embed/kc0qZPPoO5AFK7B3xk" width="200" height="200"
+          allow-full-screen></iframe>
         <a href="https://www.hbomax.com/br/pt/series/urn:hbo:series:GXkRjxwjR68PDwwEAABKJ" target="
-        ">Assistir Rick and Morty</a></div>
+        ">Watch Rick and Morty</a>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer>
-      <p>Projeto desenvolvido por <a href="https://github.com/josirubin">Josielen Rubin</a> | Turma SAP010 Bootcamp Laboratoria</p>
-    </footer>
+  <footer>
+    <p>Projeto desenvolvido por <a href="https://github.com/josirubin">Josielen Rubin</a> | Turma SAP010 Bootcamp
+      Laboratoria</p>
+  </footer>
 
 
-    <script src="src/main.js" type="module"></script>
-  </body>
+  <script src="src/main.js" type="module"></script>
+</body>
+
 </html>
-
-
