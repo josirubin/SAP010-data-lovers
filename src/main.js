@@ -24,7 +24,7 @@ function criaCardPersonagens(personagens) {
   const printarCard = personagens.map((personagens) => {
     const card = `
         <div class = "cards">
-             <img src="${personagens.image}" alt="Imagem do personagem">
+             <img src="${personagens.image}" alt="Charactere's image">
              <h2>${personagens.name}</h2>
              <div class="filtros">
              <p>Specie: ${personagens.species}</p>
@@ -49,7 +49,7 @@ function filtroNomes() {
   criaCardPersonagens(filtroNome);
 
   const calculoPorcentagem = calcularPorcentagem(personagens.length, filtroNome.length)
-  porcentagem.innerHTML = "Essa <span>busca</span> apresenta " + calculoPorcentagem + "% dos personagens."
+  porcentagem.innerHTML = "This <span>search</span> represents " + calculoPorcentagem + "% of characteres."
 }
 inputDeBusca.addEventListener('input', filtroNomes)
 
@@ -67,7 +67,7 @@ selecaoEspecie.addEventListener('change', (event) => {
   criaCardPersonagens(personagensFiltrados);
 
   const calculoPorcentagem = calcularPorcentagem(personagens.length, personagensFiltrados.length)
-  porcentagem.innerHTML = "Essa <span>espécie</span> apresenta " + calculoPorcentagem + "% dos personagens."
+  porcentagem.innerHTML = "This <span>specie</span> represents " + calculoPorcentagem + "% of characteres."
 })
 
 //filtro status
@@ -78,6 +78,6 @@ selecaoStatus.addEventListener('change', (event) => {
   criaCardPersonagens(personagensFiltrados);
 
   const calculoPorcentagem = calcularPorcentagem(personagens.length, personagensFiltrados.length)
-  porcentagem.innerHTML = "Esse <span>status</span> apresenta " + calculoPorcentagem + "% dos personagens."
+  porcentagem.innerHTML = "This <span>status</span> represents " + calculoPorcentagem + "% of characteres."
 })
 
