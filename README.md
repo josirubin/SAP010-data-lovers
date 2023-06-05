@@ -1,17 +1,39 @@
 # Data Lovers - Rick and Morty
 
 Segundo projeto desenvolvido no Bootcamp da Laboratória (turma SAP010). Esse projeto trabalha com uma base de dados interna e filtros de categorias. 
+Projeto disponível em: https://josirubin.github.io/SAP010-data-lovers/
 
 ## História do usuário
 
-Toda a estrutura do projeto foi pensada na imersão do usuário no mundo da série Rick and Morty. Foi pensada para pessoas que buscam conhecer mais sobre os personagens e suas características, e até para quem não conseguiu decorar o nome de todo mundo ainda! A facilidade para utilizar os filtros e o layout intuitivo são as marcas do projeto. 
+Toda a estrutura do projeto foi pensada na imersão do usuário no mundo da série Rick and Morty. Foi pensada para pessoas que buscam conhecer mais sobre os personagens e suas características, e até para quem não conseguiu decorar o nome de todo mundo ainda! A facilidade para utilizar os filtros e o layout intuitivo mesmo em inglês são as marcas do projeto. 
 
+## Testes de usabilidade com usuários
+
+Foi testado com dois usuários e ambos pontuaram sobre o tamanho dos botões no design mobile. Foi ajustado na responsividade.
+
+## Protótipo de alta fidelidade
+
+![protótipo](./src/images/prototipo.png)
+
+## Responsividade
+
+<h3><b>Design para desktop</b></h3>
+
+![desktop](./src/images/desktop.png)
+
+<h3><b>Design para tablet</b></h3>
+
+![desktop](./src/images/tablet.png)
+
+<h3><b>Design para mobile</b></h3>
+
+![desktop](./src/images/mobile.png)
 
 ## Funcionalidades
 
 O projeto conta com filtros variados. São eles:
 - Filtro por status (morto, vivo, desconhecido);
-- Filtro por espécie (humana, humanóide, alienigena, desconhecido);
+- Filtro por espécie (humana, alienigena, desconhecido);
 - Filtro por nome (o usuário pode pesquisar o nome de algum personagem).
 
 Além disso, conta com um layout responsivo, podendo ser visualizado em qualquer tamanho de tela sem preocupação com quebras de texto e imagens.
